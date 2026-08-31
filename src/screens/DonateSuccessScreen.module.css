@@ -1,0 +1,77 @@
+.screen {
+  background: var(--surface);
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 26px var(--pad-screen) 24px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-7);
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-2);
+}
+
+.amount {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.body {
+  font-size: var(--fs-s);
+  line-height: 1.55;
+  color: var(--text-3);
+  text-wrap: pretty;
+}
+
+.receipt {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 12px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-2);
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-3);
+  font-size: var(--fs-xs);
+  color: var(--text-4);
+}
+
+.receiptRow > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-2);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-4);
+}
+
+.actionsRow {
+  display: flex;
+  gap: var(--gap-4);
+}
+
+.note {
+  font-size: var(--fs-xxs);
+  line-height: 1.55;
+  color: var(--text-5);
+  text-wrap: pretty;
+}
+
+.back {
+  margin-top: auto;
+  font-size: var(--fs-s);
+  font-weight: 500;
+}

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #EDEBE5; font-family: 'Golos Text', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #2F5BA8; text-decoration: none; }
+  a:hover { color: #1E3E75; text-decoration: underline; }
+</style>
+</helmet>
+<div style="padding: 56px 56px 96px; display: flex; flex-direction: column; gap: 56px;">
+  <div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A857A;">Ishonch · hi-fi макет · десктоп 1440</div>
+    <div style="font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: #17170F;">Веб: страница сбора, каталог, кабинет сборщика</div>
+    <div style="font-size: 15px; line-height: 1.55; color: #5C584E; text-wrap: pretty;">Тот же язык, что в мобайле: светлая тема, монотип на суммах, акцент только на «помочь». На десктопе появляется вторая колонка — донат и проверка держатся у глаза при скролле; кабинет плотный и табличный.</div>
+  </div>
+
+  <div data-screen-label="Логотип" style="width: 1440px; box-sizing: border-box; background: #FBFAF7; border: 1px solid #DEDACF; border-radius: 14px; padding: 40px 56px 44px; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A857A;">знак · печать проверки</span>
+      <span style="font-size: 15px; line-height: 1.6; color: #5C584E; max-width: 62ch; text-wrap: pretty;">Знак — не сердце и не ладони, а печать на документе: квадратная рамка с ромбом внутри. Ставится там, где что-то заверено. Всегда чернильный, никогда акцентный: акцент в системе принадлежит только кнопке «Помочь».</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #E8E4DA; border: 1px solid #E8E4DA; border-radius: 12px; overflow: hidden;">
+      <div style="background: #FBFAF7; padding: 32px 24px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+        <span style="width: 56px; height: 56px; border-radius: 14px; border: 2px solid #17170F; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"><span style="width: 20px; height: 20px; background: #17170F; transform: rotate(45deg); border-radius: 2px; display: block;"></span></span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A857A;">знак</span>
+      </div>
+      <div style="background: #FBFAF7; padding: 32px 24px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+        <span style="display: flex; align-items: center; gap: 11px;">
+          <span style="width: 30px; height: 30px; border-radius: 8px; border: 1.6px solid #17170F; box-sizing: border-box; display: flex; align-items: center; justify-content: center; flex: none;"><span style="width: 11px; height: 11px; background: #17170F; transform: rotate(45deg); border-radius: 1px; display: block;"></span></span>
+          <span style="font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: #17170F;">Ishonch</span>
+        </span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A857A;">горизонтальный локап</span>
+      </div>
+      <div style="background: #17170F; padding: 32px 24px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+        <span style="display: flex; align-items: center; gap: 11px;">
+          <span style="width: 30px; height: 30px; border-radius: 8px; border: 1.6px solid #FBFAF7; box-sizing: border-box; display: flex; align-items: center; justify-content: center; flex: none;"><span style="width: 11px; height: 11px; background: #FBFAF7; transform: rotate(45deg); border-radius: 1px; display: block;"></span></span>
+          <span style="font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: #FBFAF7;">Ishonch</span>
+        </span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A857A;">инверсия</span>
+      </div>
+      <div style="background: #FBFAF7; padding: 32px 24px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+        <span style="display: flex; align-items: center; gap: 14px;">
+          <span style="width: 40px; height: 40px; border-radius: 9px; background: #17170F; display: flex; align-items: center; justify-content: center;"><span style="width: 15px; height: 15px; background: #FBFAF7; transform: rotate(45deg); border-radius: 1px; display: block;"></span></span>
+          <span style="width: 24px; height: 24px; border-radius: 6px; background: #17170F; display: flex; align-items: center; justify-content: center;"><span style="width: 9px; height: 9px; background: #FBFAF7; transform: rotate(45deg); display: block;"></span></span>
+          <span style="width: 16px; height: 16px; border-radius: 4px; background: #17170F; display: flex; align-items: center; justify-content: center;"><span style="width: 6px; height: 6px; background: #FBFAF7; transform: rotate(45deg); display: block;"></span></span>
+        </span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A857A;">аватар и фавикон · 40 / 24 / 16</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A857A;">01 · страница сбора · десктоп</div>
+    <div data-screen-label="Веб · страница сбора" style="width: 1440px; box-sizing: border-box; background: #FBFAF7; border: 1px solid #DEDACF; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px -28px rgba(23,23,15,0.28);">
+
+      <div style="height: 38px; background: #F1EFE9; border-bottom: 1px solid #E2DED3; display: flex; align-items: center; gap: 10px; padding: 0 16px;">
+        <span style="display: flex; gap: 6px;">
+          <span style="width: 10px; height: 10px; border-radius: 99px; background: #D6D2C6;"></span>
+          <span style="width: 10px; height: 10px; border-radius: 99px; background: #D6D2C6;"></span>
+          <span style="width: 10px; height: 10px; border-radius: 99px; background: #D6D2C6;"></span>
+        </span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A857A; background: #FBFAF7; border: 1px solid #E2DED3; border-radius: 6px; padding: 4px 10px;">ishonch.uz/sabina-leukemia</span>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 56px; border-bottom: 1px solid #E8E4DA;">
+        <div style="display: flex; align-items: center; gap: 36px;">
+          <span style="display: flex; align-items: center; gap: 9px;"><span style="width: 26px; height: 26px; border-radius: 7px; border: 1.6px solid #17170F; box-sizing: border-box; display: flex; align-items: center; justify-content: center; flex: none;"><span style="width: 10px; height: 10px; background: #17170F; transform: rotate(45deg); border-radius: 1px; display: block;"></span></span><span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: #17170F;">Ishonch</span></span>
+          <span style="font-size: 15px; color: #46453B;">Сборы</span>
+          <span style="font-size: 15px; color: #46453B;">Как мы проверяем</span>
+          <span style="font-size: 15px; color: #46453B;">Фондам</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <div style="display: flex; gap: 2px; border: 1px solid #DEDACF; border-radius: 8px; padding: 2px; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+            <span style="padding: 5px 9px; border-radius: 6px; background: #17170F; color: #FBFAF7;">RU</span>
+            <span style="padding: 5px 9px; border-radius: 6px; color: #6E695E;">UZ</span>
+            <span style="padding: 5px 9px; border-radius: 6px; color: #6E695E;">ЎЗ</span>
+          </div>
+          <span style="font-size: 15px; color: #46453B;">Войти</span>
+          <span style="font-size: 15px; font-weight: 600; color: #17170F; border: 1.5px solid #17170F; border-radius: 10px; padding: 9px 16px;">Создать сбор</span>
+        </div>
+      </div>
+
+      <div style="padding: 40px 56px 56px; display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 56px; align-items: start;">
+
+        <div style="display: flex; flex-direction: column; gap: 32px; min-width: 0;">
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A857A;">
+              <span>лечение · ташкент</span><span>·</span><span>сбор №0412</span>
+            </div>
+            <div style="font-size: 40px; font-weight: 600; line-height: 1.15; letter-spacing: -0.025em; color: #17170F; text-wrap: pretty; max-width: 18ch;">Лечение лейкоза для четырёхлетней Сабины</div>
+            <div style="height: 420px; border-radius: 12px; background-image: repeating-linear-gradient(135deg, #E4E0D5 0 2px, #EFECE3 2px 9px); display: flex; align-items: flex-end; padding: 16px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #7C7768; background: #FBFAF7; padding: 5px 9px; border-radius: 4px;">фото ребёнка · 3:2 · без обработки</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #E8E4DA; border: 1px solid #E8E4DA; border-radius: 10px; overflow: hidden;">
+              <div style="background: #FBFAF7; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">организатор</span>
+                <span style="font-size: 15px; font-weight: 500; color: #17170F;">Дилноза Раупова</span>
+                <span style="font-size: 13px; color: #6E695E;">мать получателя · личность подтверждена</span>
+              </div>
+              <div style="background: #FBFAF7; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">получатель помощи</span>
+                <span style="font-size: 15px; font-weight: 500; color: #17170F;">Сабина Раупова, 4 года</span>
+                <span style="font-size: 13px; color: #6E695E;">острый лимфобластный лейкоз</span>
+              </div>
+              <div style="background: #FBFAF7; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">деньги уходят</span>
+                <span style="font-size: 15px; font-weight: 500; color: #17170F;">Клиника «Ilhom Med»</span>
+                <span style="font-size: 13px; color: #6E695E;">расчётный счёт, не карта</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 28px; border-bottom: 1px solid #E8E4DA; padding-bottom: 2px;">
+            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+              <div onClick="{{ t.select }}" style="{{ t.style }}">{{ t.label }}</div>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ isStory }}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 20px; max-width: 68ch;">
+              <div style="font-size: 18px; line-height: 1.7; color: #26261C; text-wrap: pretty;">Меня зовут Дилноза, моей дочери Сабине четыре года. В июне врачи нашли острый лимфобластный лейкоз. Мы начали лечение в Ташкенте: первый блок химиотерапии прошёл, Сабина держится, но следующий блок и препараты нам нужно оплатить самим.</div>
+              <div style="font-size: 18px; line-height: 1.7; color: #26261C; text-wrap: pretty;">Я работаю швеёй, муж — водитель. Мы собрали, сколько смогли, продали машину и заняли у родственников. Осталось 180 миллионов сум, которые клиника просит внести до конца сентября — иначе лечение придётся прерывать, а при её диагнозе перерыв опасен.</div>
+              <div style="font-size: 18px; line-height: 1.7; color: #26261C; text-wrap: pretty;">Счёт от клиники и выписка приложены к сбору, деньги идут прямо на счёт больницы. Я буду публиковать здесь каждый документ и каждую выписку. Спасибо всем, кто уже помог.</div>
+              <div style="border-top: 1px solid #E8E4DA; padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A857A;">целевые выплаты · 72 800 000 из 112 400 000 распределено</span>
+                <div style="border: 1px solid #E2DED3; border-radius: 10px; overflow: hidden;">
+                  <div style="display: grid; grid-template-columns: 1.4fr 1fr 0.9fr 0.7fr; padding: 11px 16px; background: #F4F2EC; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">
+                    <span>получатель платежа</span><span>назначение</span><span style="text-align: right;">сумма, сум</span><span style="text-align: right;">документ</span>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1.4fr 1fr 0.9fr 0.7fr; padding: 13px 16px; border-top: 1px solid #E8E4DA; font-size: 14px; color: #17170F; align-items: center;">
+                    <span>Клиника «Ilhom Med»</span><span style="color: #6E695E;">Химиотерапия, блок 2</span><span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">60 000 000</span><span style="text-align: right; color: #2F5BA8;">Платёжка</span>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1.4fr 1fr 0.9fr 0.7fr; padding: 13px 16px; border-top: 1px solid #E8E4DA; font-size: 14px; color: #17170F; align-items: center;">
+                    <span>Аптека «Shifo»</span><span style="color: #6E695E;">Препараты по рецепту</span><span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">12 800 000</span><span style="text-align: right; color: #2F5BA8;">Счёт-фактура</span>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1.4fr 1fr 0.9fr 0.7fr; padding: 12px 16px; border-top: 1px solid #E8E4DA; background: #F8F6F0; font-size: 13px; color: #6E695E; align-items: center;">
+                    <span>Не распределено</span><span>ожидает счёта клиники</span><span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">39 600 000</span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isUpdates }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 28px; max-width: 68ch;">
+              <sc-for list="{{ updates }}" as="u" hint-placeholder-count="3">
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 20px; border-left: 2px solid #DEDACF;">
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A857A;">{{ u.date }}</span>
+                  <span style="font-size: 19px; font-weight: 600; color: #17170F;">{{ u.title }}</span>
+                  <span style="font-size: 16px; line-height: 1.65; color: #46453B; text-wrap: pretty;">{{ u.text }}</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #2F5BA8;">{{ u.doc }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isRegistry }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A857A;">публичный реестр поступлений · 312 записей</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #2F5BA8;">Скачать CSV</span>
+              </div>
+              <div style="border: 1px solid #E2DED3; border-radius: 10px; overflow: hidden;">
+                <div style="display: grid; grid-template-columns: 60px 1.2fr 1.6fr 0.8fr 0.7fr; padding: 11px 16px; background: #F4F2EC; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">
+                  <span>№</span><span>донор</span><span>комментарий</span><span style="text-align: right;">сумма, сум</span><span style="text-align: right;">когда</span>
+                </div>
+                <sc-for list="{{ donations }}" as="d" hint-placeholder-count="8">
+                  <div style="display: grid; grid-template-columns: 60px 1.2fr 1.6fr 0.8fr 0.7fr; padding: 12px 16px; border-top: 1px solid #E8E4DA; font-size: 14px; color: #17170F; align-items: center;">
+                    <span style="font-family: 'JetBrains Mono', monospace; color: #A9A498;">{{ d.n }}</span>
+                    <span>{{ d.name }}</span>
+                    <span style="color: #6E695E;">{{ d.note }}</span>
+                    <span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">{{ d.sum }}</span>
+                    <span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A857A;">{{ d.time }}</span>
+                  </div>
+                </sc-for>
+                <div style="padding: 13px 16px; border-top: 1px solid #E8E4DA; background: #F8F6F0; display: flex; justify-content: space-between; font-size: 13px; color: #6E695E;">
+                  <span>Показано 8 из 312</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">итого 112 400 000 сум</span>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isDocs }}" hint-placeholder-val="{{ false }}">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+              <sc-for list="{{ files }}" as="f" hint-placeholder-count="6">
+                <div style="border: 1px solid #E2DED3; border-radius: 10px; overflow: hidden;">
+                  <div style="height: 180px; background-image: repeating-linear-gradient(135deg, #E4E0D5 0 2px, #EFECE3 2px 9px);"></div>
+                  <div style="padding: 12px 13px; display: flex; flex-direction: column; gap: 3px; border-top: 1px solid #E8E4DA;">
+                    <span style="font-size: 14px; font-weight: 500; color: #17170F;">{{ f.name }}</span>
+                    <span style="font-size: 12px; color: #6E695E;">{{ f.meta }}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px; position: sticky; top: 24px;">
+          <div style="border: 1px solid #DEDACF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 16px; background: #FBFAF7;">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="display: flex; align-items: baseline; gap: 8px;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; color: #17170F; font-variant-numeric: tabular-nums;">112 400 000</span>
+                <span style="font-size: 16px; color: #17170F;">сум</span>
+              </div>
+              <div style="height: 8px; background: #E8E4DA; border-radius: 99px; overflow: hidden;">
+                <div style="width: 62.4%; height: 100%; background: #2F5BA8;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 14px; color: #6E695E;">
+                <span>62% от цели</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">цель 180 000 000</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px dashed #E1DDD2; padding-top: 14px; font-size: 14px; color: #5C584E;">
+              <div style="display: flex; justify-content: space-between;"><span>Помогли</span><span style="font-family: 'JetBrains Mono', monospace; color: #17170F;">312 человек</span></div>
+              <div style="display: flex; justify-content: space-between;"><span>Последний перевод</span><span style="font-family: 'JetBrains Mono', monospace; color: #17170F;">7 минут назад</span></div>
+              <div style="display: flex; justify-content: space-between;"><span>Сбор идёт до</span><span style="font-family: 'JetBrains Mono', monospace; color: #17170F;">30.09.2026</span></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="height: 54px; border-radius: 12px; background: #2F5BA8; color: #FBFAF7; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600;">Помочь</div>
+              <div style="height: 54px; border-radius: 12px; border: 1.5px solid #17170F; color: #17170F; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600;">Поделиться</div>
+              <span style="font-size: 12px; line-height: 1.55; color: #8A857A; text-wrap: pretty;">Без регистрации. Деньги идут напрямую на счёт клиники — Ishonch не хранит средства и не берёт комиссию.</span>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #17170F; border-radius: 14px; overflow: hidden;">
+            <div onClick="{{ toggleVerify }}" style="padding: 16px 18px; background: #F4F2EC; display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+              <div style="display: flex; flex-direction: column; gap: 3px;">
+                <span style="font-size: 16px; font-weight: 600; color: #17170F;">Что именно проверено</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #6E695E;">4 из 4 пунктов · 14.08.2026</span>
+              </div>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #17170F;">{{ verifyGlyph }}</span>
+            </div>
+            <sc-if value="{{ verifyOpen }}" hint-placeholder-val="{{ true }}">
+              <div style="display: flex; flex-direction: column;">
+                <sc-for list="{{ checks }}" as="c" hint-placeholder-count="4">
+                  <div style="display: flex; gap: 11px; padding: 14px 18px; border-top: 1px solid #E8E4DA;">
+                    <span style="font-size: 14px; color: #17170F;">✓</span>
+                    <div style="display: flex; flex-direction: column; gap: 3px;">
+                      <span style="font-size: 14px; font-weight: 500; color: #17170F;">{{ c.title }}</span>
+                      <span style="font-size: 12px; line-height: 1.5; color: #6E695E;">{{ c.detail }}</span>
+                    </div>
+                  </div>
+                </sc-for>
+                <div style="padding: 13px 18px; border-top: 1px solid #E8E4DA; background: #F8F6F0; font-size: 12px; line-height: 1.5; color: #6E695E;">Проверку провёл модератор Ishonch. Любой пункт можно запросить документально.</div>
+              </div>
+            </sc-if>
+          </div>
+
+          <div style="border: 1px solid #E2DED3; border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; background: #F8F6F0;">
+            <span style="font-size: 14px; font-weight: 600; color: #17170F;">Если цель не собрана к 30.09</span>
+            <span style="font-size: 13px; line-height: 1.55; color: #5C584E; text-wrap: pretty;">Собранное уходит клинике на лечение Сабины, сбор закрывается с публичным отчётом о каждом поступлении и каждой выплате.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A857A;">02 · каталог · десктоп</div>
+    <div data-screen-label="Веб · каталог" style="width: 1440px; box-sizing: border-box; background: #FBFAF7; border: 1px solid #DEDACF; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px -28px rgba(23,23,15,0.28);">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 56px; border-bottom: 1px solid #E8E4DA;">
+        <div style="display: flex; align-items: center; gap: 36px;">
+          <span style="display: flex; align-items: center; gap: 9px;"><span style="width: 26px; height: 26px; border-radius: 7px; border: 1.6px solid #17170F; box-sizing: border-box; display: flex; align-items: center; justify-content: center; flex: none;"><span style="width: 10px; height: 10px; background: #17170F; transform: rotate(45deg); border-radius: 1px; display: block;"></span></span><span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: #17170F;">Ishonch</span></span>
+          <span style="font-size: 15px; font-weight: 500; color: #17170F; border-bottom: 2px solid #17170F; padding-bottom: 2px;">Сборы</span>
+          <span style="font-size: 15px; color: #46453B;">Как мы проверяем</span>
+          <span style="font-size: 15px; color: #46453B;">Фондам</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #6E695E;">RU / UZ / ЎЗ</span>
+          <span style="font-size: 15px; font-weight: 600; color: #17170F; border: 1.5px solid #17170F; border-radius: 10px; padding: 9px 16px;">Создать сбор</span>
+        </div>
+      </div>
+      <div style="padding: 40px 56px 48px; display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 60ch;">
+            <span style="font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: #17170F;">Открытые сборы</span>
+            <span style="font-size: 15px; line-height: 1.6; color: #5C584E; text-wrap: pretty;">128 сборов, прошедших все четыре пункта проверки. Сборы на модерации в каталоге не показываются.</span>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <span style="padding: 9px 14px; border-radius: 99px; background: #17170F; color: #FBFAF7; font-size: 14px;">Все</span>
+            <span style="padding: 9px 14px; border-radius: 99px; border: 1px solid #DEDACF; color: #46453B; font-size: 14px;">Лечение</span>
+            <span style="padding: 9px 14px; border-radius: 99px; border: 1px solid #DEDACF; color: #46453B; font-size: 14px;">Реабилитация</span>
+            <span style="padding: 9px 14px; border-radius: 99px; border: 1px solid #DEDACF; color: #46453B; font-size: 14px;">Срок истекает</span>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="4">
+            <div style="border: 1px solid #E2DED3; border-radius: 12px; overflow: hidden; background: #FBFAF7;">
+              <div style="height: 180px; background-image: repeating-linear-gradient(135deg, #E4E0D5 0 2px, #EFECE3 2px 9px);"></div>
+              <div style="padding: 16px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #E8E4DA;">
+                <span style="font-size: 16px; font-weight: 500; line-height: 1.35; color: #17170F; text-wrap: pretty; min-height: 44px;">{{ c.title }}</span>
+                <div style="height: 6px; background: #E8E4DA; border-radius: 99px; overflow: hidden;">
+                  <div style="{{ c.barStyle }}"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #17170F; font-variant-numeric: tabular-nums;">
+                  <span>{{ c.raised }}</span>
+                  <span style="color: #8A857A;">из {{ c.goal }}</span>
+                </div>
+                <span style="font-size: 13px; color: #6E695E;">{{ c.meta }}</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #46453B; border-top: 1px solid #EAE6DC; padding-top: 10px;">✓ 4 из 4 пунктов проверены</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A857A;">03 · кабинет сборщика · десктоп</div>
+    <div data-screen-label="Веб · кабинет сборщика" style="width: 1440px; box-sizing: border-box; background: #FBFAF7; border: 1px solid #DEDACF; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px -28px rgba(23,23,15,0.28); display: grid; grid-template-columns: 248px minmax(0, 1fr);">
+      <div style="background: #F4F2EC; border-right: 1px solid #E2DED3; padding: 22px 18px; display: flex; flex-direction: column; gap: 24px;">
+        <span style="display: flex; align-items: center; gap: 9px;"><span style="width: 24px; height: 24px; border-radius: 6px; border: 1.6px solid #17170F; box-sizing: border-box; display: flex; align-items: center; justify-content: center; flex: none;"><span style="width: 9px; height: 9px; background: #17170F; transform: rotate(45deg); border-radius: 1px; display: block;"></span></span><span style="font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #17170F;">Ishonch</span></span>
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+          <span style="padding: 10px 12px; border-radius: 8px; background: #FBFAF7; border: 1px solid #DEDACF; font-size: 14px; font-weight: 500; color: #17170F;">Мой сбор</span>
+          <span style="padding: 10px 12px; font-size: 14px; color: #46453B;">Поступления</span>
+          <span style="padding: 10px 12px; font-size: 14px; color: #46453B;">Выплаты и документы</span>
+          <span style="padding: 10px 12px; font-size: 14px; color: #46453B;">Обновления</span>
+          <span style="padding: 10px 12px; font-size: 14px; color: #46453B;">Отчёт о использовании</span>
+        </div>
+        <div style="margin-top: auto; border: 1px solid #DEDACF; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 4px; background: #FBFAF7;">
+          <span style="font-size: 13px; font-weight: 500; color: #17170F;">Дилноза Раупова</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #6E695E;">MyID подтверждён</span>
+        </div>
+      </div>
+
+      <div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 32px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <span style="font-size: 24px; font-weight: 600; letter-spacing: -0.015em; color: #17170F;">Лечение лейкоза для четырёхлетней Сабины</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6E695E;">сбор №0412 · опубликован 12.08.2026 · идёт до 30.09.2026</span>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <span style="font-size: 14px; color: #46453B; border: 1px solid #DEDACF; border-radius: 9px; padding: 10px 14px;">Открыть страницу</span>
+            <span style="font-size: 14px; font-weight: 600; color: #FBFAF7; background: #2F5BA8; border-radius: 9px; padding: 10px 14px;">Опубликовать обновление</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #E8E4DA; border: 1px solid #E8E4DA; border-radius: 10px; overflow: hidden;">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+            <div style="background: #FBFAF7; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">{{ s.label }}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 600; color: #17170F; font-variant-numeric: tabular-nums;">{{ s.value }}</span>
+              <span style="font-size: 12px; color: #6E695E;">{{ s.note }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="border: 1px solid #E2DED3; border-radius: 10px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F8F6F0;">
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 15px; font-weight: 600; color: #17170F;">Не подтверждено назначение 39 600 000 сум</span>
+            <span style="font-size: 13px; line-height: 1.5; color: #5C584E;">Загрузите счёт клиники — после этого сумма уйдёт целевой выплатой и появится в публичном отчёте.</span>
+          </div>
+          <span style="font-size: 14px; font-weight: 600; color: #17170F; border: 1.5px solid #17170F; border-radius: 9px; padding: 10px 14px; white-space: nowrap;">Загрузить счёт</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A857A;">поступления · последние</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #2F5BA8;">Выгрузить реестр CSV</span>
+          </div>
+          <div style="border: 1px solid #E2DED3; border-radius: 10px; overflow: hidden;">
+            <div style="display: grid; grid-template-columns: 60px 1.1fr 1.5fr 0.9fr 0.8fr 0.8fr; padding: 11px 16px; background: #F4F2EC; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A857A;">
+              <span>№</span><span>донор</span><span>комментарий</span><span style="text-align: right;">сумма, сум</span><span style="text-align: right;">канал</span><span style="text-align: right;">когда</span>
+            </div>
+            <sc-for list="{{ donations }}" as="d" hint-placeholder-count="8">
+              <div style="display: grid; grid-template-columns: 60px 1.1fr 1.5fr 0.9fr 0.8fr 0.8fr; padding: 11px 16px; border-top: 1px solid #E8E4DA; font-size: 14px; color: #17170F; align-items: center;">
+                <span style="font-family: 'JetBrains Mono', monospace; color: #A9A498;">{{ d.n }}</span>
+                <span>{{ d.name }}</span>
+                <span style="color: #6E695E;">{{ d.note }}</span>
+                <span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">{{ d.sum }}</span>
+                <span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6E695E;">{{ d.channel }}</span>
+                <span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A857A;">{{ d.time }}</span>
+              </div>
+            </sc-for>
+            <div style="padding: 12px 16px; border-top: 1px solid #E8E4DA; background: #F8F6F0; display: flex; justify-content: space-between; font-size: 13px; color: #6E695E;">
+              <span>Показано 8 из 312</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums;">итого 112 400 000 сум</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3B3A6E&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2F5BA8&quot;,&quot;#1F5B4E&quot;,&quot;#8A3E2B&quot;,&quot;#3B3A6E&quot;],&quot;section&quot;:&quot;Стиль&quot;},&quot;activeTab&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;story&quot;,&quot;updates&quot;,&quot;registry&quot;,&quot;docs&quot;],&quot;default&quot;:&quot;story&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Состояния&quot;},&quot;verifyOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Состояния&quot;}}">
+class Component extends DCLogic {
+  state = { tab: this.props.activeTab ?? 'story', verifyOpen: this.props.verifyOpen ?? true };
+
+  componentDidUpdate(prev) {
+    if (prev.activeTab !== this.props.activeTab && this.props.activeTab != null) this.setState({ tab: this.props.activeTab });
+    if (prev.verifyOpen !== this.props.verifyOpen && this.props.verifyOpen != null) this.setState({ verifyOpen: this.props.verifyOpen });
+  }
+
+  fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+
+  renderVals() {
+    const accent = this.props.accentColor ?? '#2F5BA8';
+    const tab = this.state.tab;
+    const verifyOpen = this.state.verifyOpen;
+
+    const tabs = [
+      ['story', 'История и выплаты'],
+      ['updates', 'Обновления · 3'],
+      ['registry', 'Реестр поступлений · 312'],
+      ['docs', 'Документы · 6']
+    ].map(([id, label]) => ({
+      label,
+      select: () => this.setState({ tab: id }),
+      style: `padding-bottom:12px;cursor:pointer;font-size:16px;${tab === id ? 'font-weight:600;color:#17170F;box-shadow:inset 0 -2px 0 #17170F;' : 'color:#6E695E;'}`
+    }));
+
+    const donations = [
+      ['Азиза Т.', 'Держитесь, всё будет хорошо', 100000, 'Click', '7 мин'],
+      ['Анонимно', '', 500000, 'Payme', '31 мин'],
+      ['Ойбек Х.', 'От нашей смены на заводе', 250000, 'Uzum', '1 ч'],
+      ['Мадина', 'Сабина, выздоравливай', 30000, 'Click', '2 ч'],
+      ['Анонимно', '', 20000, 'Humo', '2 ч'],
+      ['Шахзод Р.', 'Держитесь', 150000, 'Payme', '3 ч'],
+      ['Анонимно', 'От коллег из Namangan', 1000000, 'Перевод', '4 ч'],
+      ['Гулнора А.', '', 50000, 'Click', '5 ч']
+    ].map(([name, note, sum, channel, time], i) => ({
+      n: 312 - i, name, note, channel, time, sum: this.fmt(sum)
+    }));
+
+    return {
+      tabs,
+      isStory: tab === 'story',
+      isUpdates: tab === 'updates',
+      isRegistry: tab === 'registry',
+      isDocs: tab === 'docs',
+      verifyOpen,
+      verifyGlyph: verifyOpen ? '−' : '+',
+      toggleVerify: () => this.setState({ verifyOpen: !verifyOpen }),
+      donations,
+      checks: [
+        { title: 'Личность сборщика подтверждена', detail: 'MyID, биометрия · Раупова Дилноза, паспорт AD•••4271' },
+        { title: 'Родство с получателем подтверждено', detail: 'Свидетельство о рождении · мать и дочь' },
+        { title: 'Медицинские документы проверены', detail: 'Выписка НИИ гематологии, счёт клиники на 180 000 000 сум' },
+        { title: 'Реквизиты получателя сверены', detail: 'Расчётный счёт клиники «Ilhom Med», ИНН 30•••912' }
+      ],
+      updates: [
+        { date: '24 августа 2026', title: 'Второй блок химиотерапии начали', text: 'Сабину положили в среду. Из собранного клиника получила 60 миллионов сум, выписку и платёжное поручение прикладываю.', doc: '2 документа приложено' },
+        { date: '19 августа 2026', title: 'Купили препараты по рецепту', text: 'Аптека «Shifo» отпустила лекарства на 12 800 000 сум, счёт-фактура в документах сбора.', doc: '1 документ приложен' },
+        { date: '16 августа 2026', title: 'Спасибо первым ста людям', text: 'За четыре дня собрали треть суммы. Врач сказал, что в сроки лечения мы укладываемся.', doc: '' }
+      ],
+      files: [
+        { name: 'Выписка НИИ гематологии', meta: 'PDF · загружено 12.08.2026 · проверено' },
+        { name: 'Счёт клиники «Ilhom Med»', meta: 'PDF · 180 000 000 сум · проверено' },
+        { name: 'Свидетельство о рождении', meta: 'JPG · подтверждает родство · проверено' },
+        { name: 'Платёжное поручение №1', meta: 'PDF · 60 000 000 сум · 18.08.2026' },
+        { name: 'Счёт-фактура аптеки', meta: 'PDF · 12 800 000 сум · 24.08.2026' },
+        { name: 'Справка о диагнозе', meta: 'PDF · загружено 12.08.2026 · проверено' }
+      ],
+      campaigns: [
+        ['Лечение лейкоза для четырёхлетней Сабины', 112400000, 180000000, '312 человек · до 30.09.2026'],
+        ['Операция на сердце для Рустама, 52 года', 38000000, 95000000, '104 человека · до 12.10.2026'],
+        ['Реабилитация после ДТП: Нигора снова учится ходить', 21600000, 40000000, '87 человек · до 05.10.2026'],
+        ['Семье Юсуповых после пожара в Намангане', 9200000, 28000000, '61 человек · до 20.09.2026']
+      ].map(([title, raised, goal, meta]) => ({
+        title, meta,
+        raised: this.fmt(raised),
+        goal: this.fmt(goal),
+        barStyle: `width:${Math.round(raised / goal * 100)}%;height:100%;background:${accent}`
+      })),
+      stats: [
+        { label: 'собрано', value: '112 400 000', note: '62% от цели' },
+        { label: 'поступлений', value: '312', note: 'последнее 7 минут назад' },
+        { label: 'выплачено целево', value: '72 800 000', note: 'клиника и аптека' },
+        { label: 'осталось собрать', value: '67 600 000', note: '30 дней до срока' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

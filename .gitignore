@@ -1,0 +1,6 @@
+node_modules
+dist
+.thumbnail
+design/support.js
+*.local
+.DS_Store

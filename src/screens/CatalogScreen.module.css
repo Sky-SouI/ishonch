@@ -36,12 +36,9 @@
   flex: none;
 }
 
-.subtitle {
-  font-size: var(--fs-xs);
-  line-height: 1.55;
-  color: var(--text-3);
-  text-wrap: pretty;
-}
+/* Подводка стоит либо сверху (десктоп), либо в подвале списка (мобайл),
+   но не в обоих местах сразу. */
+.subtitle { display: none; }
 
 .filters {
   display: flex;
@@ -165,8 +162,11 @@
   }
 
   .subtitle {
+    display: block;
     font-size: var(--fs-sm);
     line-height: var(--lh-body);
+    color: var(--text-3);
+    text-wrap: pretty;
     max-width: 60ch;
   }
 
@@ -232,5 +232,5 @@
     padding-top: var(--gap-4);
   }
 
-  .foot { padding: var(--gap-9) 0 0; }
+  .foot { display: none; }
 }

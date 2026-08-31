@@ -33,7 +33,8 @@
   padding: 8px var(--pad-screen);
   display: flex;
   align-items: baseline;
-  gap: var(--gap-3);
+  flex-wrap: wrap;
+  gap: var(--gap-2) var(--gap-3);
 }
 
 .ribbonLabel {
@@ -48,11 +49,14 @@
   flex: none;
 }
 
+/* На мобайле подводка уходит на свою строку под лейбл и ссылку. */
 .ribbonText {
   font-size: var(--fs-xxs);
   line-height: 1.45;
   color: rgba(251, 250, 247, 0.72);
   min-width: 0;
+  order: 3;
+  flex-basis: 100%;
 }
 
 .ribbonToggle {
@@ -127,8 +131,8 @@
 }
 
 @media (min-width: 1024px) {
-  .ribbonRow { padding-inline: var(--pad-screen-wide); }
+  .ribbonRow { padding-inline: var(--pad-screen-wide); flex-wrap: nowrap; }
   .ribbonPanel { padding-inline: var(--pad-screen-wide); }
-  .ribbonText { font-size: var(--fs-xs); }
+  .ribbonText { font-size: var(--fs-xs); order: 0; flex-basis: auto; }
   .toast { bottom: 32px; }
 }

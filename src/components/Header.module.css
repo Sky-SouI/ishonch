@@ -1,0 +1,126 @@
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.inner {
+  max-width: var(--w-desktop);
+  margin: 0 auto;
+  padding: 12px var(--pad-screen) 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-5);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);
+  min-width: 0;
+}
+
+.brand { text-decoration: none; }
+.brand:hover { text-decoration: none; }
+
+.nav { display: none; }
+
+.navLink,
+.navLinkMuted {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.navLink:hover { color: var(--ink); text-decoration: none; }
+
+.navLinkOn {
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.navLinkMuted { color: var(--text-5); cursor: default; }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-5);
+}
+
+.login,
+.create { display: none; }
+
+/* --- Шапка потока --- */
+
+.flow {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-hair);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.flowInner {
+  max-width: var(--w-desktop);
+  margin: 0 auto;
+  padding: 12px var(--pad-screen) 14px;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-5);
+}
+
+.back {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: var(--fs-lg);
+  line-height: 1;
+  color: var(--ink);
+  flex: none;
+}
+
+.flowTitles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.flowTitle {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.flowSubtitle {
+  font-size: var(--fs-xxs);
+  color: var(--text-4);
+}
+
+.flowRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-3);
+}
+
+@media (min-width: 1024px) {
+  .inner { padding: 18px var(--pad-screen-wide); }
+  .flowInner { padding: 18px var(--pad-screen-wide); }
+  .nav { display: flex; align-items: center; gap: var(--gap-10); }
+  .right { gap: var(--gap-7); }
+  .login { display: inline; font-size: var(--fs-sm); color: var(--text-2); cursor: default; }
+  .create {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--r-lg);
+    padding: 9px 16px;
+    text-decoration: none;
+  }
+  .create:hover { background: var(--tint); color: var(--ink); text-decoration: none; }
+}

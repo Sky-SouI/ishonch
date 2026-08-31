@@ -1,0 +1,134 @@
+/* Пометка демонстрационных данных. Чернильная, не акцентная:
+   акцент в системе принадлежит только действию «помочь». */
+
+.mark,
+.markInline {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 2px 5px;
+  border: 1px dashed var(--border-input);
+  border-radius: var(--r-xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-nano);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-5);
+  background: transparent;
+  cursor: help;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.markInline { cursor: default; }
+
+.ribbon {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.ribbonRow {
+  max-width: var(--w-desktop);
+  margin: 0 auto;
+  padding: 8px var(--pad-screen);
+  display: flex;
+  align-items: baseline;
+  gap: var(--gap-3);
+}
+
+.ribbonLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-nano);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--surface);
+  border: 1px solid rgba(251, 250, 247, 0.4);
+  border-radius: var(--r-xs);
+  padding: 2px 6px;
+  flex: none;
+}
+
+.ribbonText {
+  font-size: var(--fs-xxs);
+  line-height: 1.45;
+  color: rgba(251, 250, 247, 0.72);
+  min-width: 0;
+}
+
+.ribbonToggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-2);
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--surface);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  flex: none;
+}
+
+.ribbonGlyph {
+  font-family: var(--font-mono);
+  font-size: var(--fs-s);
+  text-decoration: none;
+}
+
+.ribbonPanel {
+  max-width: var(--w-desktop);
+  margin: 0 auto;
+  padding: 0 var(--pad-screen) 14px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-3);
+  font-size: var(--fs-xxs);
+  line-height: 1.55;
+  color: rgba(251, 250, 247, 0.78);
+  max-inline-size: 92ch;
+}
+
+.ribbonPanel .markInline {
+  border-color: rgba(251, 250, 247, 0.4);
+  color: rgba(251, 250, 247, 0.85);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 88px;
+  transform: translateX(-50%);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-3);
+  max-width: calc(100vw - 32px);
+  padding: 11px 14px;
+  border-radius: var(--r-xl);
+  background: var(--ink);
+  color: var(--surface);
+  font-size: var(--fs-xs);
+  line-height: 1.4;
+  box-shadow: 0 16px 36px -18px rgba(23, 23, 15, 0.6);
+}
+
+.toastMark {
+  font-family: var(--font-mono);
+  font-size: var(--fs-nano);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border: 1px dashed rgba(251, 250, 247, 0.45);
+  border-radius: var(--r-xs);
+  flex: none;
+}
+
+@media (min-width: 1024px) {
+  .ribbonRow { padding-inline: var(--pad-screen-wide); }
+  .ribbonPanel { padding-inline: var(--pad-screen-wide); }
+  .ribbonText { font-size: var(--fs-xs); }
+  .toast { bottom: 32px; }
+}

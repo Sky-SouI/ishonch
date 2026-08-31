@@ -1,0 +1,188 @@
+/* --- Знак --- */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-3);
+}
+
+.seal {
+  border: 1.6px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.sealInverse { border-color: var(--surface); }
+
+.sealDiamond {
+  background: var(--ink);
+  transform: rotate(45deg);
+  border-radius: 1px;
+  display: block;
+}
+
+.sealDiamondInverse { background: var(--surface); }
+
+.wordmark {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  letter-spacing: var(--ls-heading);
+  color: var(--ink);
+}
+
+.wordmarkInverse { color: var(--surface); }
+
+/* --- Язык --- */
+
+.lang {
+  display: flex;
+  gap: 2px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  padding: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  flex: none;
+}
+
+.langItem {
+  padding: 5px 8px;
+  border-radius: var(--r-sm);
+  color: var(--text-4);
+}
+
+.langItemOn {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.langCompact {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--text-4);
+}
+
+/* --- Прогресс --- */
+
+.track {
+  background: var(--border-hair);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+  width: 100%;
+}
+
+.track_sm { height: 5px; }
+.track_md { height: 8px; }
+.track_lg { height: 8px; }
+
+.bar {
+  height: 100%;
+  background: var(--accent);
+}
+
+/* --- Штриховка вместо изображений --- */
+
+.hatch {
+  background-image: var(--hatch);
+  display: flex;
+  width: 100%;
+}
+
+.hatch_center { align-items: center; justify-content: center; }
+.hatch_bottom { align-items: flex-end; justify-content: center; padding-bottom: 12px; }
+.hatch_bottom-left { align-items: flex-end; justify-content: flex-start; padding: 16px; }
+
+.hatchR_none { border-radius: 0; }
+.hatchR_md { border-radius: var(--r-md); }
+.hatchR_lg { border-radius: var(--r-lg); }
+.hatchR_xl { border-radius: var(--r-xl); }
+
+.hatchCaption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--text-on-hatch);
+  background: var(--surface);
+  padding: 4px 8px;
+  border-radius: var(--r-xs);
+}
+
+/* --- Кнопки --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3);
+  border-radius: var(--r-xl);
+  border: 1px solid transparent;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.btn:hover { text-decoration: none; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn_lg { height: var(--control-h-lg); padding-inline: var(--gap-8); font-size: var(--fs-base); }
+.btn_md { height: var(--control-h); padding-inline: var(--gap-7); font-size: var(--fs-base); }
+.btn_sm { height: var(--control-h-sm); padding-inline: var(--gap-6); font-size: var(--fs-sm); }
+
+.btnFull { width: 100%; }
+
+/* Акцент — только действие «помочь» и его продолжение в потоке доната. */
+.btn_accent {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
+}
+.btn_accent:hover:not(:disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--on-accent);
+}
+
+.btn_outline {
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  background: var(--surface);
+}
+.btn_outline:hover:not(:disabled) { background: var(--tint); color: var(--ink); }
+
+.btn_quiet {
+  border: 1px solid var(--border-strong);
+  color: var(--text-2);
+  font-weight: 400;
+  background: var(--surface);
+}
+.btn_quiet:hover:not(:disabled) { background: var(--tint); color: var(--text-2); }
+
+.btn_ink {
+  background: var(--ink);
+  color: var(--surface);
+  border-color: var(--ink);
+  border-radius: var(--r-lg);
+}
+.btn_ink:hover:not(:disabled) { background: #000; color: var(--surface); }
+
+/* --- Лейбл секции с правым слотом --- */
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--gap-4);
+}
+
+.labelRight {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--text-5);
+}

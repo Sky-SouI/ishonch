@@ -4,3 +4,4 @@ dist
 design/support.js
 *.local
 .DS_Store
+.claude
